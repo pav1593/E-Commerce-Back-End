@@ -23,6 +23,7 @@ ProductTag.belongsTo(Product,{
 // Products belongToMany Tags (through ProductTag)
 Product.hasMany(ProductTag, {
     foreignKey: 'product_id',
+    onDelete: 'CASCADE',
 });
 
 // ProductTag belongsTo single Tag
@@ -33,6 +34,7 @@ ProductTag.belongsTo(Tag, {
 // Tags belongToMany Products(through ProductTag)
 Tag.hasMany(ProductTag,{
     foreignKey: 'tag_id',
+    onDelete: 'CASCADE',
 })
 
 
